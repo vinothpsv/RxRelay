@@ -15,15 +15,44 @@ import io.reactivex.disposables.Disposable;
 public class MainActivity extends AppCompatActivity {
 
     /*Relay<String> relay = BehaviorRelay.create();*/
-    /*Emits 3, subscribe 4, 5, 6*/
+    /*Emits
+    subscribe,
+    onSubscribe,
+    onNext(3),
+    4,
+    onNext,
+    5,
+    onNext,
+    6,
+    onNext*/
 
     /*Relay<String> relay = PublishRelay.create();*/
-    /*Emits subscribe 4, 5, 6*/
+    /*Emits
+    subscribe,
+    onSubscribe,
+    4,
+    onNext,
+    5,
+    onNext,
+    6,
+    onNext*/
 
     /*Relay<String> relay = ReplayRelay.create();*/
-    /*Emits 1, 2, 3 subscribe 4, 5, 6*/
+    /*Emits
+    subscribe,
+    onSubscribe,
+    onNext,
+    1,
+    2,
+    3,
+    4,
+    onNext,
+    5,
+    onNext,
+    6,
+    onNext*/
 
-    Relay<String> relay = ReplayRelay.create();
+    Relay<String> relay = BehaviorRelay.create();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
